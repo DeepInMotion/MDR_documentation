@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Deep In Motion : 14.2 Dependency of features</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Deep In Motion</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Deep-In-Motion-Home_401868245.html">Deep In Motion Home</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Index-of-tables_403308818.html">Index of tables</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Preparation_403308866.html">Preparation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Deep In Motion : 14.2 Dependency of features
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+    
+        
+    
+        
+        
+            Created by <span class='author'> Felix Tempel</span>, last updated on 11.06.2025
+    
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p style="" data-start="5239" data-end="5258"><strong data-start="5239" data-end="5256">Documentation</strong></p><p data-start="5261" data-end="5302"><strong data-start="5261" data-end="5300">Description of Feature Dependencies</strong></p><ul data-start="5305" data-end="6144"><li data-start="5305" data-end="5630"><p data-start="5307" data-end="5630">In video-based skeletal data, the 19 body points form a known anatomical graph: joints are connected according to the human body’s kinematic chain (e.g., the elbow connects the shoulder and wrist). The deep learning architecture (i.e, graph convolutional network) leverages this topology to model dependencies among joint movements.</p></li><li data-start="5633" data-end="5892"><p data-start="5635" data-end="5892">Temporal dependencies: joints’ positions/velocities across frames/windows are temporally correlated; the model processes sequences (i.e, using temporal convolution with attention mechanisms) to capture how current movement depends on past frames.</p></li><li data-start="5895" data-end="6144"><p data-start="5897" data-end="6144">Biomechanical relationships: segment lengths tie pairs of joint coordinates; e.g., distance between shoulder and elbow is constrained by anatomy. These constraints inform that certain features are interdependent and reduce spurious correlations.</p></li><li data-start="5895" data-end="6144" data-uuid="27da2a69-fb9b-4aff-bd9b-8f900b09e6b4">The model is designed to exploit dependencies within the features to learn complex movement patterns.<ul data-start="5305" data-end="6144"><li data-start="5895" data-end="6144" data-uuid="ccb0e874-4bf4-47df-af2e-ef27107c7aa5">The model processes contiguous 5-second windows, capturing correlations over time between joint movements and the features derived therefrom.</li><li data-start="5895" data-end="6144" data-uuid="6e51d075-bd27-483a-a449-aa502041008d">The features are fused in one main stream block after their individual input stream block.</li></ul></li></ul><p data-start="6147" data-end="6172"><strong data-start="6147" data-end="6170">Visualization / DAG</strong></p><ul><li data-start="6147" data-end="6172">The body key points are embedded in an adjacency matrix, which has different aggregation capabilities, which are defined in <a class="external-link" href="http://arxiv.org/abs/1801.07455" rel="nofollow">(Yan et. al).</a></li><li data-start="6283" data-end="6342"><p data-start="6285" data-end="6342">Nodes: each joint coordinate or biomechanical property.</p></li><li data-start="6347" data-end="6421"><p data-start="6349" data-end="6421">Edges: anatomical connections (e.g., shoulder ↔ elbow, elbow ↔ wrist).</p></li><li data-start="6426" data-end="6502"><p data-start="6428" data-end="6502">Temporal edges: connect same joint across successive time steps/windows.</p></li><li data-start="6505" data-end="6777"><p data-start="6507" data-end="6777">In the study, Figure 2 and supplementary Figure eFigure1 illustrate how model layers first detect single-joint motion, then aggregate to whole-body patterns (<a href="attachments/403309793/428344797.pdf" data-linked-resource-id="428344797" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Development and Validation of a Deep Learning Method to Predict Cerebral Palsy From Spontaneous Movements in Infants at High Risk.pdf" data-nice-type="PDF Document" data-linked-resource-content-type="application/pdf" data-linked-resource-container-id="403309793" data-linked-resource-container-version="2">Groos et. al.</a>).</p></li></ul><p data-start="8289" data-end="8316"><strong data-start="8289" data-end="8314">Regulatory References</strong></p><ul data-start="8319" data-end="8451"><li data-start="8319" data-end="8451"><p data-start="8321" data-end="8451">ISO 13485: design process should consider interactions among inputs; document how model architecture handles feature dependencies.</p></li></ul><p><br/></p>
+                    </div>
+
+                                        
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 19.08.2025 10:34 CEST</p>
+                    <div id="footer-logo"><a href="https://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

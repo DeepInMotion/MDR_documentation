@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Deep In Motion : 14.6 Test data not used within training</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Deep In Motion</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Deep-In-Motion-Home_401868245.html">Deep In Motion Home</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Index-of-tables_403308818.html">Index of tables</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Preparation_403308866.html">Preparation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Deep In Motion : 14.6 Test data not used within training
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+    
+        
+    
+        
+        
+            Created by <span class='author'> Felix Tempel</span>, last updated on 13.06.2025
+    
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p style="" data-start="15717" data-end="15736"><strong data-start="15717" data-end="15734">Documentation</strong></p><p data-start="15739" data-end="15765"><strong data-start="15739" data-end="15763">Dataset Partitioning</strong></p><ul data-start="15768" data-end="16420"><li data-start="15768" data-end="16061"><p data-start="15770" data-end="16061"><strong data-start="15770" data-end="15794">Development vs. Test</strong>: In <a href="attachments/403309793/428345082.pdf" data-linked-resource-id="428345082" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Groos et al. - 2021 - EfficientPose Scalable single-person pose estimat.pdf" data-nice-type="PDF Document" data-linked-resource-content-type="application/pdf" data-linked-resource-container-id="403309793" data-linked-resource-container-version="2">(Groos et al.)</a>, a strict 75%/25% split at the infant level was enforced.</p><ul data-start="15768" data-end="16420"><li data-start="15768" data-end="16061" data-uuid="cd9ae798-bf42-427c-ba4c-e74f6118cc97"><p data-start="15770" data-end="16061">The 25% external validation set was held out and never exposed during model architecture search, hyperparameter tuning, or internal validation steps.</p></li></ul></li><li data-start="16064" data-end="16249"><p data-start="16066" data-end="16249"><strong data-start="16066" data-end="16089">Internal Validation</strong>: Within the development set, only cross-validation folds were used for model selection and tuning. No test-set information was referenced during these steps.</p></li><li data-start="16252" data-end="16420"><p data-start="16254" data-end="16420"><strong data-start="16254" data-end="16274">Final Evaluation</strong>: After finalizing model(s) on development data, the ensemble was evaluated once on the held-out test set to obtain performance metrics.</p></li></ul><p data-start="16868" data-end="16887"><strong data-start="16868" data-end="16885">Justification</strong></p><ul data-start="16890" data-end="17020"><li data-start="16890" data-end="17020"><p data-start="16892" data-end="17020">To obtain unbiased estimates of generalization performance and comply with best practices in ML for regulated medical devices.</p></li></ul><p data-start="17915" data-end="17942"><strong data-start="17915" data-end="17940">Regulatory References</strong></p><ul data-start="17945" data-end="18078"><li data-start="17945" data-end="18078"><p data-start="17947" data-end="18078">ISO 13485: document procedures for design validation, ensuring unbiased evaluation; traceability of datasets to evaluation results.</p></li></ul>
+                    </div>
+
+                                        
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 19.08.2025 10:34 CEST</p>
+                    <div id="footer-logo"><a href="https://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

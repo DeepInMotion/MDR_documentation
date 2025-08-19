@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Deep In Motion : 14.1 Justification Features</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Deep In Motion</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Deep-In-Motion-Home_401868245.html">Deep In Motion Home</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Index-of-tables_403308818.html">Index of tables</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Preparation_403308866.html">Preparation</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Deep In Motion : 14.1 Justification Features
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+    
+        
+    
+        
+        
+            Created by <span class='author'> Felix Tempel</span>, last updated on 13.06.2025
+    
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><strong>Requirements</strong>:</p><p>The manufacturer has justified the selection of features that it considers during training.</p><p><br/></p><p><strong>Documentation:</strong></p><p><strong>List of Features</strong></p><ul><li><p><em>Raw input features</em>: video frames capturing spontaneous infant movements during the “fidgety” period (9–18 weeks corrected age).</p></li><li><p><em>Derived features (motion-tracking outputs)</em>: horizontal and vertical coordinates of 19 anatomical body points (forehead, nose, ears, upper neck, shoulders, elbows, wrists, upper chest, right pelvis, left pelvis, midpelvis, knees, ankles) extracted per frame by a validated motion tracker <a href="attachments/403309793/428345082.pdf" data-linked-resource-id="428345082" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Groos et al. - 2021 - EfficientPose Scalable single-person pose estimat.pdf" data-nice-type="PDF Document" data-linked-resource-content-type="application/pdf" data-linked-resource-container-id="403309793" data-linked-resource-container-version="2">(Groos et al. 2021)</a>.</p></li><li><p><em>Biomechanical/temporal features: </em>from the skeleton sequence, in each 5-second window:</p><ul><li><p>Joint positions (coordinates) over time.</p></li><li><p>Joint velocities (temporal derivatives).</p></li><li><p>Body segment lengths (e.g., distance between connected joints and angle) over time.</p></li></ul></li><li>The figure below shows the features derived from the skeletal representation.</li><li><p><em>Model-specific representations</em>: learned deep features in successive layers (initial layers capture local joint/limb movements, later layers capture whole-body spatiotemporal patterns) <a href="attachments/403309793/428344797.pdf" data-linked-resource-id="428344797" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Development and Validation of a Deep Learning Method to Predict Cerebral Palsy From Spontaneous Movements in Infants at High Risk.pdf" data-nice-type="PDF Document" data-linked-resource-content-type="application/pdf" data-linked-resource-container-id="403309793" data-linked-resource-container-version="2">(Groos et al. 2022)</a>.</p></li></ul><p><a href="attachments/428344945/428345098.pdf" data-linked-resource-id="428345098" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="skeleton_cp-2.pdf" data-nice-type="PDF Document" data-linked-resource-content-type="application/pdf" data-linked-resource-container-id="428344945" data-linked-resource-container-version="8">skeleton_infant.pdf</a></p><p><strong>Justification of Feature Choice</strong></p><ul><li><p><strong>Clinical relevance</strong>: The 19 body points correspond to key anatomical landmarks used in general movement assessment (GMA) for infant movement analysis, ensuring that captured features align with domain knowledge of movement patterns predictive of cerebral palsy <a href="attachments/403309793/428345082.pdf" data-linked-resource-id="428345082" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Groos et al. - 2021 - EfficientPose Scalable single-person pose estimat.pdf" data-nice-type="PDF Document" data-linked-resource-content-type="application/pdf" data-linked-resource-container-id="403309793" data-linked-resource-container-version="2">(Groos et al. 2021)</a></p></li><li><p><strong>Technical feasibility &amp; validity</strong>: A previously trained and validated motion tracker was used to reliably extract those 19 points from videos following GMA standards, ensuring consistency and reproducibility of feature extraction.</p></li><li><p><strong>Representation learning</strong>: By providing the skeleton sequence as input, the deep learning model can automatically learn discriminative spatiotemporal features, eliminating manual bias in feature selection and enabling detection of complex patterns associated with CP.</p></li><li><p><strong>Biomechanical interpretability</strong>: Using explicit biomechanical properties (positions, velocities, segment lengths) in windows ensures that learned features have a physiological grounding, facilitating later interpretation or analysis of what the model “sees” as important movement biomarkers.</p></li><li data-uuid="a65f7743-74ef-45a5-9b82-02f86182ebb2"><strong>Exclusion of Features:</strong> Facial expressions are not included in the 19-point tracker, since unavailable. </li></ul><p><strong>Regulatory References</strong></p><ul><li><p>ISO 13485: design input specification (7.3.2) and design output verification (7.3.3) require documenting and justifying feature selection.</p></li></ul>
+                    </div>
+
+                                                            <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/428344945/428345099.pdf">skeleton_cp-2.pdf</a> (application/pdf)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/428344945/428345098.pdf">skeleton_cp-2.pdf</a> (application/pdf)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on 19.08.2025 10:34 CEST</p>
+                    <div id="footer-logo"><a href="https://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
