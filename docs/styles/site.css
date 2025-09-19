@@ -759,3 +759,106 @@ $style
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAAD4CAMAAACDgmeaAAAAGFBMVEX///9wcHBwcHBwcHBwcHBwcHBwcHBwcHDJYMTAAAAACHRSTlMAESIzRFVmd1lsqD8AAAS2SURBVHja7d3hbtwgEARgBlj8/m/cNO3dVIpSnwEzNy37s1Ljr5P11saWSQsLQP5LAUhvWESfF2DJZgFqdp9b30N0j/kd3ayVfMKd+IT78UG5mZ5wIz7lbnrKHfWg3E2PvLwgl5catfTqxZnXdrQqyJ7yAftxHJH7S9nnJSKKwE76CL6ULLAj68uYnv3kLAFdac/Z1Y5sa0e2ted3Kr/QWXPo5aPWmR/HmpN6ba0ukz8PNqdh2nG0a6t1wHPdD7hmb4+rzzm9Hq3F6BIjcJf97PdYyyl71q1vfRxsyWyke5b/gn2Zm/5Z9sVw8sftspUIDNsVcIY/ZJcvXfXbdXLqO+1SOfU9drzzEvk8OuWr9LPolK/TO9AJet2ulZ/rp9EFD28ndQwUj5596JSd2uXyc70fnfiBjiFdhB+mJ1F9e+h3Dp35fvPHCvpl/Fy6vozp2HRFGdPhS0/GdPjS09wVWE3s43SUiKX2iR1TI6JIYh9v9hwfhXX2bro+eLzyHCm9WmDwitjjOKJ0xM7gqyB2PjctPXQGn1XdHq1F6b/FK8uCx/l7AldDjFWna/eM0c9JTF4U4Jw0iF03J9FN189JdHeMfk7eEDvnpGHsnJMGsWvmZHfs+jmJm2LnnDSIXTAnu2PXz0ncFjvnpFfsrDuD745dPydxZ+yck4Z2Bu/XMpyTBrGvnJPojl0/J9Edu35OXm6ZNzpdF7QM56RfyzB4PzvnpGHLcE762TknDVuGc9LAvuJ0xbKW4ZzUt7s++HUtwzmpt+vn5LqW4Zw0PFU5J/3sPF3Vdv2cxNJTlXPS71TlnDS0c0762TknTe3gyWpnTxnPIYE59i77+HiDjZ104m3spBNvYyedeB/7rMMIXp7FrON8fVPpdvu03+/XD5r8iU9G9jiOVjML236T/eRFVAs7a9svzsj9f9PNdtRiek2AGhGwvBYr8bOK4TVwjl902N175Poprw+qzz0ffsv5A12WsFHi0eksjzW9wkZnWayl5mCjC+yCRhfbKY9RuWDQsNEldggaXW7PbHSVPQsaXXuy8qpLakf3gxk2ulnDZza6T8Oztn1Bw4vsu2lE9t002z69aTzt/k2Dbd9Nc2K3apodvMhuHDx28CK7cfDYwe/gL1c2xmfjrsEOXlNwxmfjrsHJpro2wXNTXQ88XtlU1yT4Ei2qS8vjlU11YTlqiN+fNt6flL4YfH7T4DdeU3gZvz+8vzc8IN64bbIxHhb4PIqHMN++rtHj4b73lCUeXXut6fXMNfnh8a/tLXiO1+vRsQ+oyV6aLMc9TIl/Jz2M9+z9D/ZKZsFvj2oW/PYGZ8FyT3b+ZRkfozc+yCI9Zmw9lnsLg/Ae+zie/Nlw2m/Ek49L7nkrc8Tf7wfdU+zEjxeAcTbtM/ClRrn8j8An+DqZ391IM/C1HVHzoirxeOg7uNbHr6ess7fjaLSPRl+jRVmXe2PuQ3huybaqeLTUjddXulzO9gRfO/F6u68+GeJp99UnY3waKMjttnokDZ6vMA7RJXq+wjgi1+j5CmO/XKovEbX0ytX6UkqvXK9Xy6mHo5z8RXCv8HEi14cvhJNvCScfnnD6Pd30W7pZAPqXivV1tuqL6+gfhgR/YaTH2YEAAAAASUVORK5CYII=)
         right no-repeat;
 }
+
+/* ===== custom overrides (yours) – keep at the very end ===== */
+
+/* readable width + spacing */
+.wiki-content {
+  max-width: 80ch;
+  margin: 2.5rem auto 4rem;
+  padding: 0 1rem;
+}
+
+/* typography */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.wiki-content h1, .wiki-content h2, .wiki-content h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.wiki-content h1 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); }
+.wiki-content h2 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
+.wiki-content h3 { font-size: clamp(1.2rem, 2vw, 1.4rem); }
+
+/* links (nicer hover, keep your Confluence colors) */
+.wiki-content a {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+.wiki-content a:hover,
+.wiki-content a:focus {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+
+/* images & media */
+.wiki-content img, .wiki-content svg, .wiki-content video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* tables */
+.wiki-content .confluenceTable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--confluence-color-scheme-borderColor, var(--ds-border));
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--ds-surface, #fafafa);
+}
+.wiki-content .confluenceTable th,
+.wiki-content .confluenceTable td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--confluence-color-scheme-borderColor, var(--ds-border));
+  vertical-align: top;
+}
+.wiki-content .confluenceTable th {
+  text-align: left;
+  font-weight: 600;
+}
+
+/* code blocks */
+.wiki-content code, .wiki-content pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  background: color-mix(in srgb, var(--ds-surface, #fff) 85%, transparent);
+  border: 1px solid var(--confluence-color-scheme-borderColor, var(--ds-border));
+}
+.wiki-content code {
+  padding: 0.15rem 0.35rem;
+  border-radius: 6px;
+}
+.wiki-content pre {
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  overflow: auto;
+}
+.wiki-content pre > code { border: 0; background: transparent; padding: 0; }
+
+/* callouts/panels */
+.wiki-content .panel {
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--ds-surface, #fff) 90%, transparent);
+}
+.wiki-content .panelHeader {
+  font-weight: 600;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--confluence-color-scheme-borderColor, var(--ds-border));
+}
+.wiki-content .panelContent { padding: 0.9rem; }
+
+/* blockquote */
+.wiki-content blockquote {
+  padding: 0.5rem 1rem;
+  border-left: 4px solid var(--confluence-color-scheme-borderColor, var(--ds-border));
+  color: var(--ds-text-subtle, #6b7280);
+  background: color-mix(in srgb, var(--ds-surface, #fff) 92%, transparent);
+  border-radius: 8px;
+}
+
+/* small niceties */
+html { scroll-behavior: smooth; }
